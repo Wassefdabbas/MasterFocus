@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Focus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="App">
+        <!-- Header -->
+        <header>
+            <i class="fa-solid fa-bars" onclick="openSideBar()"></i>
+            <div class="title">
+                <span>Master Focus</span>
+                <span>"Master Your Time - Master Your Life"</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <i class="fa-solid fa-x" onclick="closeSideBar()"></i>
+            <div class="inputField">
+                <span>Your Name</span>
+                <input type="text" name="Name" placeholder="Your Name" autocomplete="off">
+                <button class="submit">Submit</button>
+            </div>
+            <div class="copyright">
+                <h3>"Created by Wassef Dabbas | © 2025. All rights reserved."</h3>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="Container">
+
+            <div class="section visible">
+                <!-- Message -->
+                <div class="mainMessage">
+                    <h3>Hi <span id="messageUserName">there!</span></h3>
+                    <h2>Welcome to <span>Master Focus!</span></h2>
+                    "You’ve taken the first step toward mastering your time and goals. Stay consistent, stay focused, and
+                    success will follow. Let’s make today productive!"
+                </div>
+
+                <!-- Tasks Info -->
+                <div class="mainPageTasks">
+                    <div class="boxOfTask">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>Remaining Tasks</h3>
+                        <span class="infoTasks" id="remainingTasks">13</span>
+                    </div>
+                    <div class="boxOfTask">
+                        <i class="fa-solid fa-square-check"></i>
+                        <h3>Completed Tasks</h3>
+                        <span class="infoTasks" id="CompletedTask">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pomodoro Section -->
+            <div class="section" id="Pomodoro">
+                <div class="timer-container">
+                    <h1>Pomodoro Timer</h1>
+                    <div class="time-display">
+                        <span id="minutes">25</span>:<span id="seconds">00</span>
+                    </div>
+                    <div class="controls">
+                        <label for="set-time">Set time 1 min - 90 min :</label>
+                        <div class="time-controls">
+                            <input type="number" id="set-time" placeholder="Set time 1 min - 90 min" value="25" min="1" max="90">
+                            <div class="setCon">
+                                <button id="increase-time">+</button>
+                                <button id="set-time-btn">Set</button>
+                                <button id="decrease-time">-</button>
+                            </div>
+                        </div>
+                        <button id="start-stop"><i class = "fa-solid fa-play"></i></button>
+                        <button id="reset"><i class = "fa-solid fa-arrow-rotate-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- To-Do List Section -->
+            <div class="section" id="ToDo_List">
+                <div class="TODO">
+                    <h1>To-Do List</h1>
+                    <div class="SearchBox">
+                        <input type="text" id="inputBar" placeholder="Add Task" autocomplete="off">
+                        <button id="addButton" onclick="addTask()">ADD</button>
+                    </div>
+                    <div class="tasks">
+                        <!-- Tasks will be created dynamically in JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="section" id="Notes">
+                <div class="NOTES">
+                    <div class="addSection">
+                        <h1>Add Your Notes</h1>
+                        <button id="addNoteBtn">+</button>
+                    </div>
+                    <div class="noteContainer" id="noteContainer">
+                        <!-- Notes will be added dynamically in JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons Controls -->
+            <div class="buttonsControl">
+                <button class="controeBtn" id="startPomodoro" onclick="active('Pomodoro')">Pomodoro</button>
+                <button class="controeBtn" id="setCustomTimer" onclick="active('ToDo_List')">To-Do List</button>
+                <button class="controeBtn" id="showTimer" onclick="active('Notes')">Notes</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
