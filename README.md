@@ -3,7 +3,7 @@
 Master Focus is a productivity web app built with **HTML**, **CSS**, and **JavaScript**.  
 It combines focus tools in one simple site: **to-do list, notes, and Pomodoro timer**.
 
-🔗 **Live Demo:** [Master Focus]([https://your-link-here.com](https://wassefdabbas.github.io/MasterFocus/))
+🔗 **Live Demo:** [Master Focus]([(https://wassefdabbas.github.io/MasterFocus/)](https://wassefdabbas.github.io/MasterFocus/))
 
 ---
 
